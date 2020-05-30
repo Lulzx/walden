@@ -1,0 +1,83 @@
+@charset "utf-8";
+@namespace epub "http://www.idpf.org/2007/ops";
+@namespace xml "http://www.w3.org/XML/1998/namespace";
+
+cite{
+	display: block;
+	font-style: italic;
+	text-align: right;
+}
+
+table{
+	margin: 1em auto;
+	font-variant-numeric: tabular-nums;
+}
+
+table tr td{
+	padding: 0 .5em;
+	vertical-align: top;
+}
+
+table tr.total td{
+	border-top: 1px solid;
+}
+
+table td:first-child{
+	max-width: 75%;
+}
+
+table td:nth-child(2){
+	text-align: right;
+}
+
+[epub|type~="z3998:verse"] p,
+[epub|type~="z3998:poem"] p{
+	text-align: left;
+	text-indent: 0;
+}
+
+[epub|type~="z3998:verse"] p + p{
+	margin-top: 1em;
+}
+
+[epub|type~="z3998:verse"] p > span,
+[epub|type~="z3998:poem"] p > span{
+	display: block;
+	text-indent: -1em;
+	padding-left: 1em;
+}
+
+p span.i1{
+	text-indent: -1em;
+	padding-left: 2em;
+}
+
+[epub|type~="z3998:verse"] p > span + br,
+[epub|type~="z3998:poem"] p > span + br{
+	display: none;
+}
+
+span[epub|type~="subtitle"]{
+	display: block;
+	font-size: .75em;
+	font-weight: normal;
+}
+
+body [xml|lang]{
+	font-style: italic;
+}
+
+[epub|type~="z3998:poem"] header{
+	font-size: 1.25em;
+	font-variant: small-caps;
+	margin-bottom: 1em;
+	margin-top: 3em;
+}
+
+[epub|type~="z3998:poem"] header p{
+	text-align: center;
+}
+
+[epub|type~="z3998:poem"] header p span:first-child{
+	font-weight: bold;
+}

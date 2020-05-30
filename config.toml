@@ -1,0 +1,9 @@
+baseURL = ""
+languageCode = "en-us"
+title = "Breaking Smart: Season One"
+relativeurls = true
+uglyurls = true
+disableKinds = ["taxonomyTerm", "taxonomy"]
+
+[markup.goldmark.renderer]
+unsafe = true
